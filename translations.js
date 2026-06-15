@@ -255,7 +255,7 @@ const translations = {
     'cta-btn-dark':   'Explore Services',
     // Footer
     'footer-tagline': 'The Sherpa for Your Argentina Expansion',
-    'footer-copy':    '© 2025 Argentina Landing Services. All rights reserved.',
+    'footer-copy':    '© {year} Argentina Landing Services. All rights reserved.',
   },
 
   es: {
@@ -514,6 +514,6 @@ const translations = {
     'cta-btn-dark':   'Ver servicios',
     // Footer
     'footer-tagline': 'The Sherpa for Your Argentina Expansion',
-    'footer-copy':    '© 2025 Argentina Landing Services. Todos los derechos reservados.',
+    'footer-copy':    '© {year} Argentina Landing Services. Todos los derechos reservados.',
   }
 };
