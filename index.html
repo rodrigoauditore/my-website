@@ -367,16 +367,34 @@ nav.scrolled {
   display: flex; align-items: center; gap: 20px;
 }
 .bio-avatar {
-  width: 60px; height: 60px;
+  width: 80px; height: 80px;
   background: rgba(200,160,74,.2);
   border-radius: 50%;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
   border: 2px solid rgba(200,160,74,.4);
+  overflow: hidden;
 }
+.bio-avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
 .bio-avatar svg { width: 28px; height: 28px; fill: var(--gold); }
 .bio-name { font-family: var(--ff-display); font-size: 1.4rem; font-weight: 700; color: var(--white); }
 .bio-role { font-size: .8rem; color: var(--gold); margin-top: 4px; font-weight: 500; }
+.linkedin-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 14px;
+  border-radius: 100px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--gold);
+  border: 1px solid rgba(200,160,74,.35);
+  text-decoration: none;
+  transition: border-color var(--trans), background var(--trans), color var(--trans);
+  white-space: nowrap;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+.linkedin-btn:hover { border-color: var(--gold); background: rgba(200,160,74,.12); }
+.linkedin-btn svg { width: 14px; height: 14px; fill: var(--gold); flex-shrink: 0; }
 .bio-body { padding: 28px 32px 32px; }
 .bio-desc { font-size: .95rem; color: var(--gray); line-height: 1.75; margin-bottom: 24px; }
 .expertise-label {
@@ -770,11 +788,17 @@ footer { background: var(--navy-d); padding: 48px 24px 32px; }
       <!-- Luis -->
       <div class="bio-card reveal">
         <div class="bio-header">
-          <div class="bio-avatar"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+          <div class="bio-avatar">
+            <img src="photos/Luis.jpeg" alt="Luis Galeazzi" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg viewBox=\'0 0 24 24\' style=\'width:28px;height:28px;fill:var(--gold)\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg>'">
+          </div>
           <div>
             <div class="bio-name">Luis Galeazzi</div>
             <div class="bio-role" data-i18n="luis-role">Co-Founder — ALS</div>
           </div>
+          <a href="https://www.linkedin.com/in/luis-galeazzi" target="_blank" rel="noopener" class="linkedin-btn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
         </div>
         <div class="bio-body">
           <p class="bio-desc" data-i18n="luis-desc">A recognized leader within Argentina's knowledge economy and international business community. Throughout his career he has worked with multinational corporations, business chambers, government institutions, and investment promotion initiatives — helping position Argentina as a global services and technology destination.</p>
@@ -793,11 +817,17 @@ footer { background: var(--navy-d); padding: 48px 24px 32px; }
       <!-- Alejandro -->
       <div class="bio-card reveal" style="transition-delay:.1s">
         <div class="bio-header">
-          <div class="bio-avatar"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg></div>
+          <div class="bio-avatar">
+            <img src="photos/Alejandro.png" alt="Alejandro Auditore" onerror="this.style.display='none';this.parentElement.innerHTML+='<svg viewBox=\'0 0 24 24\' style=\'width:28px;height:28px;fill:var(--gold)\'><rect x=\'2\' y=\'7\' width=\'20\' height=\'14\' rx=\'2\'/><path d=\'M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2\'/></svg>'">
+          </div>
           <div>
             <div class="bio-name">Alejandro Auditore</div>
             <div class="bio-role" data-i18n="alejandro-role">Co-Founder — Former VP, Chevron</div>
           </div>
+          <a href="https://www.linkedin.com/in/alejandro-auditore/" target="_blank" rel="noopener" class="linkedin-btn">
+            <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
         </div>
         <div class="bio-body">
           <p class="bio-desc" data-i18n="alejandro-desc">International executive with extensive experience in finance, shared services, and organizational transformation. As former Vice President and Shared Services leader at Chevron, he was responsible for multidisciplinary teams providing finance, accounting, procurement, HR, and administrative support across multiple countries and business units.</p>
