@@ -512,7 +512,7 @@ const translations = {
     'why-5-desc': 'Nuestro objetivo es ayudar a los clientes a pasar de la decisión de inversión a la preparación operativa de la manera más eficiente posible — reduciendo riesgos y acelerando el retorno.',
     // CTA
     'cta-tag':        'Hablemos',
-    'cta-title':      'Listo para expandirte a Argentina',
+    'cta-title':      '¿Listo para expandirte a Argentina?',
     'cta-sub':        'Conversemos sobre tu proyecto. Sin compromiso, sin vueltas — directo al punto.',
     'cta-btn-primary':'Escribinos',
     'cta-btn-dark':   'Ver servicios',
