@@ -256,6 +256,10 @@ const translations = {
     // Footer
     'footer-tagline': 'The Sherpa for Your Argentina Expansion',
     'footer-copy':    '© {year} Argentina Landing Services. All rights reserved.',
+    'footer-privacy': 'Privacy Policy',
+    'footer-legal':   'Legal Notice',
+    'nav-back':       '← Back to site',
+    'cta-consent':    'By contacting us, you agree to our <a href="privacy.html">Privacy Policy</a>.',
   },
 
   es: {
@@ -515,5 +519,9 @@ const translations = {
     // Footer
     'footer-tagline': 'The Sherpa for Your Argentina Expansion',
     'footer-copy':    '© {year} Argentina Landing Services. Todos los derechos reservados.',
+    'footer-privacy': 'Política de Privacidad',
+    'footer-legal':   'Aviso Legal',
+    'nav-back':       '← Volver al sitio',
+    'cta-consent':    'Al contactarnos, aceptás nuestra <a href="privacy.html">Política de Privacidad</a>.',
   }
 };

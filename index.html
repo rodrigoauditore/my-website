@@ -614,6 +614,8 @@ nav.scrolled {
   line-height: 1.75;
 }
 #cta .cta-actions { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.cta-consent { font-size: .8rem; color: var(--gray); margin-top: 22px; }
+.cta-consent a { color: var(--navy); text-decoration: underline; }
 .btn-dark { background: var(--navy); color: var(--white); }
 .btn-dark:hover { background: var(--navy-m); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(27,58,107,.3); }
 
@@ -623,11 +625,24 @@ footer { background: var(--navy-d); padding: 48px 24px 32px; }
   max-width: 1160px; margin: 0 auto;
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
 }
 .footer-logo { font-family: var(--ff-display); font-size: 1.5rem; font-weight: 900; color: var(--white); }
 .footer-logo span { color: var(--gold); }
 .footer-tagline { font-size: .82rem; color: rgba(255,255,255,.4); margin-top: 4px; }
-.footer-copy { font-size: .8rem; color: rgba(255,255,255,.35); }
+.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+.footer-links a {
+  font-size: .82rem;
+  color: rgba(255,255,255,.55);
+  text-decoration: none;
+  transition: color var(--trans);
+}
+.footer-links a:hover { color: var(--gold); }
+.footer-copy {
+  max-width: 1160px; margin: 24px auto 0;
+  font-size: .8rem; color: rgba(255,255,255,.35);
+}
 
 /* ── Scroll reveal ──────────────────────────────────────────────────────── */
 .reveal { opacity: 0; transform: translateY(28px); transition: opacity .65s ease, transform .65s ease; }
@@ -1292,6 +1307,7 @@ footer { background: var(--navy-d); padding: 48px 24px 32px; }
         </a>
         <a href="#framework" class="btn btn-dark" data-i18n="cta-btn-dark">Explore Services</a>
       </div>
+      <p class="cta-consent" data-i18n="cta-consent">By contacting us, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
     </div>
   </div>
 </section>
@@ -1303,8 +1319,13 @@ footer { background: var(--navy-d); padding: 48px 24px 32px; }
       <div class="footer-logo">ALS<span>.</span></div>
       <div class="footer-tagline" data-i18n="footer-tagline">The Sherpa for Your Argentina Expansion</div>
     </div>
-    <div class="footer-copy" data-i18n="footer-copy">© 2025 Argentina Landing Services. All rights reserved.</div>
+    <div class="footer-links">
+      <a href="privacy.html" data-i18n="footer-privacy">Privacy Policy</a>
+      <a href="legal.html" data-i18n="footer-legal">Legal Notice</a>
+      <a href="mailto:info@alsargentina.ar">info@alsargentina.ar</a>
+    </div>
   </div>
+  <div class="footer-copy" data-i18n="footer-copy">© 2025 Argentina Landing Services. All rights reserved.</div>
 </footer>
 
 <script src="translations.js"></script>
