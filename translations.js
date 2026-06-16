@@ -280,7 +280,7 @@ const translations = {
     'stat-label-2':     'Modelos de engagement',
     'stat-label-3':     'Soporte end-to-end',
     'stat-label-4':     'Punto único de contacto',
-    'scroll-hint':      'scroll',
+    'scroll-hint':      'Desliza',
     // Summary
     'summary-tag':        'Resumen',
     'summary-title':      'Por qué Argentina, por qué ahora',
