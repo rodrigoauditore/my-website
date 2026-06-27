@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Alejandro Auditore — ALS</title>
+<meta name="description" content="Alejandro Auditore — Co-Founder, ALS. Tap to save my contact." />
+<link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="Alejandro Auditore — Co-Founder, ALS" />
+<meta property="og:description" content="Tap to save my contact details." />
+<meta property="og:image" content="https://alsargentina.ar/photos/Alejandro.png" />
+<meta property="og:url" content="https://alsargentina.ar/alejandro/" />
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #1B3A6B;
+  --navy-d: #122848;
+  --navy-m: #1D4480;
+  --gold:   #C8A04A;
+  --gold-l: #D9B96A;
+  --white:  #FFFFFF;
+  --light:  #EAF0F8;
+  --lgray:  #F5F7FA;
+  --mgray:  #D0DCF0;
+  --gray:   #6B7280;
+  --dark:   #1A1A2E;
+
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-body:    'Inter', system-ui, sans-serif;
+  --ff-mono:    'DM Mono', monospace;
+
+  --radius:  16px;
+  --radius-s: 10px;
+  --trans: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--ff-body);
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(200,160,74,.10) 0%, transparent 60%),
+    var(--lgray);
+  color: var(--dark);
+  line-height: 1.6;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  padding: 16px 16px 28px;
+}
+
+.card {
+  width: 100%;
+  max-width: 420px;
+  background: var(--white);
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 18px 60px rgba(27,58,107,.18);
+}
+
+/* ── Header ───────────────────────────────────────────── */
+.card-head {
+  position: relative;
+  background:
+    radial-gradient(140% 120% at 80% -20%, var(--navy-m) 0%, transparent 55%),
+    linear-gradient(160deg, var(--navy) 0%, var(--navy-d) 100%);
+  padding: 26px 26px 22px;
+  text-align: center;
+  color: var(--white);
+  overflow: hidden;
+}
+.card-head::after {
+  content: "";
+  position: absolute; left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--gold) 30%, var(--gold-l) 70%, transparent);
+}
+.brand {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: .02em;
+  margin-bottom: 16px;
+}
+.brand span { color: var(--gold); }
+
+.avatar {
+  width: 92px; height: 92px;
+  margin: 0 auto 13px;
+  border-radius: 50%;
+  background: rgba(200,160,74,.18);
+  border: 3px solid rgba(200,160,74,.55);
+  box-shadow: 0 10px 30px rgba(0,0,0,.28);
+  overflow: hidden;
+  display: flex; align-items: center; justify-content: center;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.avatar svg { width: 36px; height: 36px; fill: var(--gold); }
+
+.name {
+  font-family: var(--ff-display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.12;
+  margin-bottom: 5px;
+}
+.role {
+  font-size: .8rem;
+  color: var(--gold-l);
+  font-weight: 500;
+  letter-spacing: .01em;
+}
+.org-tag {
+  display: inline-block;
+  margin-top: 11px;
+  font-family: var(--ff-mono);
+  font-size: 9.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--mgray);
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.14);
+  padding: 5px 13px;
+  border-radius: 100px;
+}
+
+/* ── Save button ──────────────────────────────────────── */
+.card-body { padding: 18px 18px 22px; }
+
+.save-btn {
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-l) 100%);
+  color: var(--navy-d);
+  font-family: var(--ff-body);
+  font-size: .98rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 100px;
+  padding: 14px 20px;
+  cursor: pointer;
+  box-shadow: 0 8px 22px rgba(200,160,74,.32);
+  transition: transform var(--trans), box-shadow var(--trans);
+  text-decoration: none;
+}
+.save-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200,160,74,.42); }
+.save-btn:active { transform: translateY(0); }
+.save-btn svg { width: 18px; height: 18px; fill: var(--navy-d); }
+
+/* ── Contact rows ─────────────────────────────────────── */
+.contacts { margin-top: 14px; display: flex; flex-direction: column; gap: 8px; }
+.row {
+  display: flex; align-items: center; gap: 13px;
+  padding: 10px 13px;
+  background: var(--lgray);
+  border: 1px solid var(--light);
+  border-radius: var(--radius-s);
+  text-decoration: none;
+  color: var(--dark);
+  transition: border-color var(--trans), background var(--trans), transform var(--trans);
+}
+.row:hover { border-color: var(--gold); background: rgba(200,160,74,.07); transform: translateX(2px); }
+.row-icon {
+  width: 36px; height: 36px; flex-shrink: 0;
+  border-radius: 9px;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+}
+.row-icon svg { width: 18px; height: 18px; fill: none; stroke: var(--gold); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.row-text { min-width: 0; flex: 1; }
+.row-label {
+  display: block;
+  font-family: var(--ff-mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gray);
+  margin-bottom: 1px;
+}
+.row-value {
+  display: block;
+  font-size: .9rem;
+  font-weight: 500;
+  color: var(--navy);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.row-arrow { margin-left: auto; color: var(--mgray); flex-shrink: 0; }
+.row-arrow svg { width: 16px; height: 16px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ── QR ───────────────────────────────────────────────── */
+.qr-wrap {
+  margin-top: 16px;
+  padding: 18px;
+  background: var(--lgray);
+  border: 1px solid var(--light);
+  border-radius: var(--radius);
+  text-align: center;
+}
+.qr-title {
+  font-family: var(--ff-mono);
+  font-size: 9.5px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3px;
+}
+.qr-sub { font-size: .76rem; color: var(--gray); margin-bottom: 14px; line-height: 1.4; }
+.qr-box {
+  display: inline-flex;
+  padding: 12px;
+  background: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 18px rgba(27,58,107,.10);
+}
+.qr-box img, .qr-box canvas, .qr-box svg, .qr-box table { display: block; width: 158px; height: 158px; }
+
+/* ── Footer ───────────────────────────────────────────── */
+.card-foot {
+  margin-top: 16px;
+  text-align: center;
+}
+.card-foot a {
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  font-weight: 900;
+  color: var(--navy);
+  text-decoration: none;
+}
+.card-foot a span { color: var(--gold); }
+.card-foot p {
+  font-size: .7rem;
+  color: var(--gray);
+  margin-top: 3px;
+  letter-spacing: .02em;
+}
+
+@media (max-width: 360px) {
+  .name { font-size: 1.4rem; }
+  .row-value { font-size: .85rem; }
+  .qr-box img, .qr-box canvas, .qr-box svg, .qr-box table { width: 146px; height: 146px; }
+}
+</style>
+</head>
+<body>
+  <main class="card">
+    <header class="card-head">
+      <div class="brand">ALS<span>.</span></div>
+      <div class="avatar">
+        <img src="../photos/Alejandro.png" alt="Alejandro Auditore"
+             onerror="this.style.display='none';this.parentElement.innerHTML+='<svg viewBox=\'0 0 24 24\'><path d=\'M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2\'/><circle cx=\'12\' cy=\'7\' r=\'4\'/></svg>'">
+      </div>
+      <h1 class="name">Alejandro Auditore</h1>
+      <div class="role">Co-Founder — Former VP, Chevron</div>
+      <div class="org-tag">Argentina Landing Services</div>
+    </header>
+
+    <div class="card-body">
+      <a class="save-btn" id="saveBtn" href="#" download="Alejandro-Auditore.vcf">
+        <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        Save to Contacts
+      </a>
+
+      <nav class="contacts">
+        <a class="row" href="tel:+5491131470224">
+          <span class="row-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+          <span class="row-text">
+            <span class="row-label">Mobile</span>
+            <span class="row-value">+54 9 11 3147 0224</span>
+          </span>
+          <span class="row-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </a>
+
+        <a class="row" href="mailto:alejandro.auditore@alsargentina.ar">
+          <span class="row-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 6L2 7"/></svg></span>
+          <span class="row-text">
+            <span class="row-label">Email</span>
+            <span class="row-value">alejandro.auditore@alsargentina.ar</span>
+          </span>
+          <span class="row-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </a>
+
+        <a class="row" href="https://alsargentina.ar/" target="_blank" rel="noopener">
+          <span class="row-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+          <span class="row-text">
+            <span class="row-label">Website</span>
+            <span class="row-value">alsargentina.ar</span>
+          </span>
+          <span class="row-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </a>
+
+        <a class="row" href="https://www.linkedin.com/in/alejandro-auditore/" target="_blank" rel="noopener">
+          <span class="row-icon"><svg viewBox="0 0 24 24" style="fill:var(--gold);stroke:none"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>
+          <span class="row-text">
+            <span class="row-label">LinkedIn</span>
+            <span class="row-value">in/alejandro-auditore</span>
+          </span>
+          <span class="row-arrow"><svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg></span>
+        </a>
+      </nav>
+
+      <div class="qr-wrap">
+        <div class="qr-title">Scan to save</div>
+        <div class="qr-sub">Point your camera here to add me to your contacts</div>
+        <div class="qr-box" id="qrBox"></div>
+      </div>
+
+      <div class="card-foot">
+        <a href="https://alsargentina.ar/">ALS<span>.</span></a>
+        <p>Argentina Landing Services</p>
+      </div>
+    </div>
+  </main>
+
+<script>
+(function () {
+  // ── Contact data ──────────────────────────────────────
+  var c = {
+    first: "Alejandro",
+    last:  "Auditore",
+    org:   "ALS — Argentina Landing Services",
+    title: "Co-Founder — Former VP, Chevron",
+    tel:   "+5491131470224",
+    email: "alejandro.auditore@alsargentina.ar",
+    url:   "https://alsargentina.ar/",
+    li:    "https://www.linkedin.com/in/alejandro-auditore/",
+    photo: "https://alsargentina.ar/photos/Alejandro.png"
+  };
+
+  // Escape commas/semicolons/backslashes in free-text values (vCard 3.0)
+  function esc(s) { return String(s).replace(/([\\,;])/g, "\\$1"); }
+
+  // ── Build vCard (3.0 — broad compatibility) ───────────
+  var vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "N:" + esc(c.last) + ";" + esc(c.first) + ";;;",
+    "FN:" + esc(c.first + " " + c.last),
+    "ORG:" + esc(c.org),
+    "TITLE:" + esc(c.title),
+    "TEL;TYPE=CELL,VOICE:" + c.tel,
+    "EMAIL;TYPE=WORK,INTERNET:" + c.email,
+    "URL:" + c.url,
+    "URL;TYPE=LinkedIn:" + c.li,
+    "PHOTO;VALUE=URI:" + c.photo,
+    "END:VCARD"
+  ].join("\r\n");
+
+  // ── Save-to-contacts: serve vCard as a downloadable blob
+  var blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+  var blobUrl = URL.createObjectURL(blob);
+  var saveBtn = document.getElementById("saveBtn");
+  saveBtn.setAttribute("href", blobUrl);
+
+  // ── QR code = the vCard itself ────────────────────────
+  var qrBox = document.getElementById("qrBox");
+
+  function renderWithApi() {
+    var img = new Image();
+    img.alt = "vCard QR code";
+    img.width = 158; img.height = 158;
+    img.src = "https://api.qrserver.com/v1/create-qr-code/?size=400x400&margin=0&ecc=M&data=" +
+              encodeURIComponent(vcard);
+    qrBox.innerHTML = "";
+    qrBox.appendChild(img);
+  }
+
+  function renderWithLib() {
+    try {
+      var qr = qrcode(0, "M");        // auto version, medium error correction
+      qr.addData(vcard);
+      qr.make();
+      qrBox.innerHTML = qr.createSvgTag({ cellSize: 5, margin: 0, scalable: true });
+    } catch (e) {
+      renderWithApi();
+    }
+  }
+
+  // Prefer offline-capable client-side generation; fall back to API.
+  var s = document.createElement("script");
+  s.src = "https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js";
+  s.onload = renderWithLib;
+  s.onerror = renderWithApi;
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>
