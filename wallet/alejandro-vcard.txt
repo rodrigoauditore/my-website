@@ -1,0 +1,11 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Auditore;Alejandro;;;
+FN:Alejandro Auditore
+ORG:ALS — Argentina Landing Services
+TITLE:Co-Founder — Former VP\, Chevron
+TEL;TYPE=CELL,VOICE:+5491131470224
+EMAIL;TYPE=WORK,INTERNET:alejandro.auditore@alsargentina.ar
+URL:https://alsargentina.ar/
+URL;TYPE=LinkedIn:https://www.linkedin.com/in/alejandro-auditore/
+END:VCARD
